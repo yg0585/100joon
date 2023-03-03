@@ -1,4 +1,4 @@
-package org.example;
+package org.example.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,8 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+//https://www.acmicpc.net/problem/13460
+public class Prob13460 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -47,7 +48,7 @@ public class Main {
 					boolean redFlag = false;
 					int[] temp = poll.clone();
 					while (arr[temp[2] + direction[k][0]][temp[3] + direction[k][1]] != '#'
-					|| arr[temp[0] + direction[k][0]][temp[1] + direction[k][1]] != '#') {
+						|| arr[temp[0] + direction[k][0]][temp[1] + direction[k][1]] != '#') {
 						if (arr[temp[2] + direction[k][0]][temp[3] + direction[k][1]] != '#') {
 							temp[2] += direction[k][0];
 							temp[3] += direction[k][1];
